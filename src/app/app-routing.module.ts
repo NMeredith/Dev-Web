@@ -5,7 +5,6 @@ import {ListTitreComponent} from "./list-titre/list-titre.component";
 
 import {ContactComponent} from "./contact/contact.component";
 import {EditionComponent} from "./list-titre/edition/edition.component";
-//import {EmployeDetailResolverResolver} from "./partage/employe-detail-resolver/employe-detail-resolver.resolver";
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },

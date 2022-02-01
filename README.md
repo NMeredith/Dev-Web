@@ -1,6 +1,6 @@
 # NolinMeredith
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+NOLIN Mérédith, examen réalisée seule. Ça s'est vraissemblablement très mal passé.
 
 ## Development server
 
