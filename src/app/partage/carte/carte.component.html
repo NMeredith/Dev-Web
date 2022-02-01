@@ -1,0 +1,34 @@
+<mat-card class="carteCustom">
+  <mat-card-header>
+    <img *ngIf="titre?.picture" mat-card-avatar [src]="titre?.picture" alt="Picture du titre"/>
+    <mat-card-title>  {{titre?.title| uppercase}} {{titre?.artist}} </mat-card-title>
+    <mat-card-subtitle>
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip color="primary" *ngFor="let titre of titre?.style">
+            <mat-icon class="small">
+              work_outline
+            </mat-icon>
+            {{titre}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+
+    <mat-card-subtitle class="info">
+      <mat-icon>Duration</mat-icon>
+      <a href="duration:{{titre?.duration}}" title="Duration">{{titre?.duration}}</a>
+    </mat-card-subtitle>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-mini-fab aria-label="Editer" color="accent" [routerLink]="['/edit', titre?.id]">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-mini-fab aria-label="Supprimer" color="warn" (click)="delete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

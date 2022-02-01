@@ -1,0 +1,11 @@
+<section  *ngIf="titre; else noTitre">
+  <carte [titre]="titre" (titreDelete)="delete($event)"></carte>
+</section>
+
+<ng-template #noTitre>
+  <span>Aucunes musiques actuellement en base</span>
+</ng-template>
+
+<button id="refresh" mat-fab color="primary" (click)="random()">
+  <mat-icon>refresh</mat-icon>
+</button>
